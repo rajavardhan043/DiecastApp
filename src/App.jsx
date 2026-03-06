@@ -7,7 +7,7 @@ import EditCarModal from './components/EditCarModal'
 import CustomSelect from './components/CustomSelect'
 import { useFavorites } from './hooks/useFavorites'
 import { storage } from './storage'
-import { checkForUpdates } from './updateService'
+import { checkForUpdates, getDatabaseInfo, clearUpdateCache } from './updateService'
 
 const SORT_OPTIONS = [
   { value: 'name', label: 'Name A–Z' },
@@ -327,10 +327,24 @@ function App() {
                 {updateStatus && (
                   <span className="settings-update-status">{updateStatus}</span>
                 )}
+                <button
+                  type="button"
+                  className="settings-clear-cache-btn"
+                  onClick={() => {
+                    clearUpdateCache()
+                    setUpdateStatus('Cache cleared. Tap Check for Updates.')
+                  }}
+                >
+                  Clear cache
+                </button>
               </div>
               <div className="settings-section settings-about">
                 <span className="settings-label">App Version</span>
                 <span className="settings-version">v1.0.0</span>
+              </div>
+              <div className="settings-section settings-about">
+                <span className="settings-label">Database</span>
+                <span className="settings-version">v{getDatabaseInfo().version} · {getDatabaseInfo().count.toLocaleString()} cars</span>
               </div>
             </div>
           </div>

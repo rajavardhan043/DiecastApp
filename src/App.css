@@ -677,6 +677,19 @@ html.light-theme .card-image-wrapper {
   to { transform: rotate(360deg); }
 }
 
+.settings-clear-cache-btn {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.settings-clear-cache-btn:hover {
+  color: var(--accent);
+}
 .settings-update-status {
   font-size: 0.8rem;
   color: var(--accent);

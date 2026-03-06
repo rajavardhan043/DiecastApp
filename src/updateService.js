@@ -64,6 +64,12 @@ function mergeData(base, patchEntries) {
   return [...base, ...newEntries]
 }
 
+export function getDatabaseInfo() {
+  const version = getCachedVersion()
+  const lookup = getMergedLookup()
+  return { version, count: lookup.length }
+}
+
 export function getMergedLookup() {
   if (mergedDataCache) return mergedDataCache
   const full = getCachedFullLookup()
@@ -75,6 +81,15 @@ export function getMergedLookup() {
   const patch = getCachedPatch()
   mergedDataCache = mergeData(base, patch)
   return mergedDataCache
+}
+
+export function clearUpdateCache() {
+  try {
+    localStorage.removeItem(STORAGE_KEY_VERSION)
+    localStorage.removeItem(STORAGE_KEY_PATCH)
+    localStorage.removeItem(STORAGE_KEY_FULL)
+    mergedDataCache = null
+  } catch {}
 }
 
 export async function checkForUpdates() {
