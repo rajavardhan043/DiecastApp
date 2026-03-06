@@ -1,23 +1,5 @@
 [
   {
-    "name": "\"Hammerhead\"",
-    "year": "2011",
-    "series": "2011 New Models",
-    "img": "/thumbs/0.webp"
-  },
-  {
-    "name": "\"Hammerhead\"",
-    "year": "2012",
-    "series": "",
-    "img": "/thumbs/1.webp"
-  },
-  {
-    "name": "\"Spin King\"",
-    "year": "2012",
-    "series": "2012 New Models",
-    "img": "/thumbs/2.webp"
-  },
-  {
     "name": "'06 Dodge Viper SRT10",
     "year": "2012",
     "series": "",
@@ -2780,6 +2762,12 @@
     "name": "'63 T-Bird",
     "year": "2011",
     "series": "Treasure Hunt"
+  },
+  {
+    "name": "‘63 Thunderbird",
+    "year": "2003",
+    "series": "",
+    "img": "/thumbs/7061.webp"
   },
   {
     "name": "'63 Vette",
@@ -7229,6 +7217,24 @@
     "img": "/thumbs/1262.webp"
   },
   {
+    "name": "\"Hammerhead\"",
+    "year": "2011",
+    "series": "2011 New Models",
+    "img": "/thumbs/0.webp"
+  },
+  {
+    "name": "\"Hammerhead\"",
+    "year": "2012",
+    "series": "",
+    "img": "/thumbs/1.webp"
+  },
+  {
+    "name": "\"Spin King\"",
+    "year": "2012",
+    "series": "2012 New Models",
+    "img": "/thumbs/2.webp"
+  },
+  {
     "name": "1/4 Mile Coupe",
     "year": "2003",
     "series": "",
@@ -7732,6 +7738,11 @@
     "year": "2023",
     "series": "HW Modified",
     "img": "/thumbs/1350.webp"
+  },
+  {
+    "name": "1970 Pontiac Firebird",
+    "year": "2026",
+    "series": "Red Edition"
   },
   {
     "name": "1971 Buick Riviera",
@@ -9720,6 +9731,12 @@
     "year": "2024",
     "series": "HW Screen Time",
     "img": "/thumbs/1698.webp"
+  },
+  {
+    "name": "Aston Martin Aramco Formula One Team",
+    "year": "2026",
+    "series": "Formula 1",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Aston Martin DB10",
@@ -13263,6 +13280,12 @@
     "img": "/thumbs/2322.webp"
   },
   {
+    "name": "Chevy Blazer 4×4",
+    "year": "2025",
+    "series": "HW Dirt",
+    "img": "/thumbs/2326.webp"
+  },
+  {
     "name": "Chevy Blazer 4x4",
     "year": "2016",
     "series": ""
@@ -13277,12 +13300,6 @@
     "name": "Chevy Blazer 4x4",
     "year": "2018",
     "series": ""
-  },
-  {
-    "name": "Chevy Blazer 4×4",
-    "year": "2025",
-    "series": "HW Dirt",
-    "img": "/thumbs/2326.webp"
   },
   {
     "name": "Chevy Camaro 2010 Indy 500 Pace Car",
@@ -17262,18 +17279,6 @@
     "img": "/thumbs/3029.webp"
   },
   {
-    "name": "Drift'n Break",
-    "year": "2024",
-    "series": "HW Modified",
-    "img": "/thumbs/3030.webp"
-  },
-  {
-    "name": "Drift'n Break",
-    "year": "2025",
-    "series": "HW Wagons",
-    "img": "/thumbs/3031.webp"
-  },
-  {
     "name": "Drift-Ender",
     "year": "2025",
     "series": "HW First Response",
@@ -17284,6 +17289,18 @@
     "year": "2026",
     "series": "Truckin' Along",
     "img": "/thumbs/3033.webp"
+  },
+  {
+    "name": "Drift'n Break",
+    "year": "2024",
+    "series": "HW Modified",
+    "img": "/thumbs/3030.webp"
+  },
+  {
+    "name": "Drift'n Break",
+    "year": "2025",
+    "series": "HW Wagons",
+    "img": "/thumbs/3031.webp"
   },
   {
     "name": "Driftsta",
@@ -26095,6 +26112,12 @@
     "img": "/thumbs/4583.webp"
   },
   {
+    "name": "Mégane Trophy",
+    "year": "2012",
+    "series": "",
+    "img": "/thumbs/4826.webp"
+  },
+  {
     "name": "Mercedes 380 SEL",
     "year": "1982",
     "series": ""
@@ -26715,17 +26738,6 @@
     "img": "/thumbs/4693.webp"
   },
   {
-    "name": "Mo' Scoot",
-    "year": "2002",
-    "series": "",
-    "img": "/thumbs/4694.webp"
-  },
-  {
-    "name": "Mo' Scoot",
-    "year": "2007",
-    "series": ""
-  },
-  {
     "name": "Mo-Stash",
     "year": "2024",
     "series": "Experimotors",
@@ -26736,6 +26748,17 @@
     "year": "2025",
     "series": "HW Celebration Racers",
     "img": "/thumbs/4697.webp"
+  },
+  {
+    "name": "Mo' Scoot",
+    "year": "2002",
+    "series": "",
+    "img": "/thumbs/4694.webp"
+  },
+  {
+    "name": "Mo' Scoot",
+    "year": "2007",
+    "series": ""
   },
   {
     "name": "Mod Mill",
@@ -27456,12 +27479,6 @@
     "name": "MX48 Turbo",
     "year": "2008",
     "series": ""
-  },
-  {
-    "name": "Mégane Trophy",
-    "year": "2012",
-    "series": "",
-    "img": "/thumbs/4826.webp"
   },
   {
     "name": "NASCAR Stocker",
@@ -36671,6 +36688,11 @@
     "series": "HW Space"
   },
   {
+    "name": "Test Car 2027",
+    "year": "2027",
+    "series": "Test Series"
+  },
+  {
     "name": "The Armadillo",
     "year": "2023",
     "series": "HW Screen Time",
@@ -39106,24 +39128,6 @@
     "img": "/thumbs/6892.webp"
   },
   {
-    "name": "Volkswagen Karmann Ghia",
-    "year": "2006",
-    "series": "",
-    "img": "/thumbs/6893.webp"
-  },
-  {
-    "name": "Volkswagen Kool Kombi",
-    "year": "2013",
-    "series": "New for 2013!",
-    "img": "/thumbs/6894.webp"
-  },
-  {
-    "name": "Volkswagen Kool Kombi",
-    "year": "2014",
-    "series": "",
-    "img": "/thumbs/6895.webp"
-  },
-  {
     "name": "Volkswagen Käfer Racer",
     "year": "2017",
     "series": "New for 2017!",
@@ -39145,6 +39149,24 @@
     "year": "2022",
     "series": "HW Contoured",
     "img": "/thumbs/6899.webp"
+  },
+  {
+    "name": "Volkswagen Karmann Ghia",
+    "year": "2006",
+    "series": "",
+    "img": "/thumbs/6893.webp"
+  },
+  {
+    "name": "Volkswagen Kool Kombi",
+    "year": "2013",
+    "series": "New for 2013!",
+    "img": "/thumbs/6894.webp"
+  },
+  {
+    "name": "Volkswagen Kool Kombi",
+    "year": "2014",
+    "series": "",
+    "img": "/thumbs/6895.webp"
   },
   {
     "name": "Volkswagen New Beetle Cup",
@@ -40054,11 +40076,5 @@
     "year": "2017",
     "series": "",
     "img": "/thumbs/7060.webp"
-  },
-  {
-    "name": "‘63 Thunderbird",
-    "year": "2003",
-    "series": "",
-    "img": "/thumbs/7061.webp"
   }
 ]
