@@ -1,0 +1,19 @@
+node_modules
+dist
+.DS_Store
+.env
+.env.local
+.jdk
+
+# Android build outputs
+android/app/build
+android/.gradle
+android/build
+*.apk
+
+# Logs
+*.log
+npm-debug.log*
+
+# Data repo (lives in diecast-collection.github.io)
+diecast-data

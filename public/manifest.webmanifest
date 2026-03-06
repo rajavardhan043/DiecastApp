@@ -1,0 +1,17 @@
+{
+  "name": "My Diecast Collection",
+  "short_name": "Diecast",
+  "description": "View your diecast car collection",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0d12",
+  "theme_color": "#e94560",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

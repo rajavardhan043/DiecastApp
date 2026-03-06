@@ -1,0 +1,15 @@
+diff --git a/node_modules/@capacitor/camera/android/src/main/java/com/capacitorjs/plugins/camera/CameraPlugin.java b/node_modules/@capacitor/camera/android/src/main/java/com/capacitorjs/plugins/camera/CameraPlugin.java
+index c952d0e..e0559b7 100644
+--- a/node_modules/@capacitor/camera/android/src/main/java/com/capacitorjs/plugins/camera/CameraPlugin.java
++++ b/node_modules/@capacitor/camera/android/src/main/java/com/capacitorjs/plugins/camera/CameraPlugin.java
+@@ -285,8 +285,8 @@ public class CameraPlugin extends Plugin {
+     }
+ 
+     private CameraResultType getResultType(String resultType) {
+-        if (resultType == null) {
+-            return null;
++        if (resultType == null || resultType.isEmpty()) {
++            return CameraResultType.BASE64;
+         }
+         try {
+             return CameraResultType.valueOf(resultType.toUpperCase(Locale.ROOT));

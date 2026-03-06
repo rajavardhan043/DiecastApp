@@ -1,0 +1,9 @@
+{
+  "appId": "com.diecast.gallery",
+  "appName": "Diecast Collection",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https",
+    "allowNavigation": ["static.wikia.nocookie.net"]
+  }
+}
