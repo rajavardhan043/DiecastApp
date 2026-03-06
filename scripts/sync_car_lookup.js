@@ -4,8 +4,8 @@
  * Used by the sync-car-lookup GitHub Action when data repo is updated.
  */
 
-const fs = require('fs');
-const https = require('https');
+import fs from 'fs';
+import https from 'https';
 
 const MANIFEST_URL = 'https://raw.githubusercontent.com/rajavardhan043/diecast-collection.github.io/main/manifest.json';
 const CARLOOKUP_PATH = 'src/data/carLookup.json';
