@@ -69,7 +69,7 @@ function AddCarModal({ onClose, onSuccess, existingCars = [] }) {
   const handleNameChange = (value) => {
     setName(value)
     setSelectedIdx(-1)
-    if (value.trim().length < 2) {
+    if (brand !== 'hot-wheels' || value.trim().length < 2) {
       setSuggestions([])
       setShowSuggestions(false)
       return
@@ -84,6 +84,11 @@ function AddCarModal({ onClose, onSuccess, existingCars = [] }) {
       const key = `${m.name}|${m.year}`
       if (!keys.has(key)) { keys.add(key); unique.push(m) }
     }
+    unique.sort((a, b) => {
+      const ya = parseInt(a.year, 10) || 0
+      const yb = parseInt(b.year, 10) || 0
+      return yb - ya
+    })
     setSuggestions(unique)
     setShowSuggestions(unique.length > 0)
   }
@@ -252,7 +257,13 @@ function AddCarModal({ onClose, onSuccess, existingCars = [] }) {
             <label>Brand</label>
             <CustomSelect
               value={brand}
-              onChange={setBrand}
+              onChange={(v) => {
+                setBrand(v)
+                if (v !== 'hot-wheels') {
+                  setSuggestions([])
+                  setShowSuggestions(false)
+                }
+              }}
               options={BRANDS}
               className="cselect-form"
               ariaLabel="Brand"
@@ -278,11 +289,11 @@ function AddCarModal({ onClose, onSuccess, existingCars = [] }) {
               value={name}
               onChange={e => handleNameChange(e.target.value)}
               onKeyDown={handleNameKeyDown}
-              onFocus={() => name.trim().length >= 2 && suggestions.length > 0 && setShowSuggestions(true)}
+              onFocus={() => brand === 'hot-wheels' && name.trim().length >= 2 && suggestions.length > 0 && setShowSuggestions(true)}
               className="form-input"
               autoComplete="off"
             />
-            {showSuggestions && suggestions.length > 0 && (
+            {brand === 'hot-wheels' && showSuggestions && suggestions.length > 0 && (
               <ul className="autocomplete-list" ref={suggestionsRef}>
                 {suggestions.map((entry, i) => (
                   <li

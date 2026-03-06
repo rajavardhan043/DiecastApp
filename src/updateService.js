@@ -14,6 +14,7 @@ const MANIFEST_URL =
 const STORAGE_KEY_VERSION = 'diecast_patch_version'
 const STORAGE_KEY_PATCH = 'diecast_patch_entries'
 const STORAGE_KEY_FULL = 'diecast_full_lookup'
+const STORAGE_KEY_LAST_SYNC = 'diecast_last_sync'
 
 let mergedDataCache = null
 
@@ -64,6 +65,20 @@ function mergeData(base, patchEntries) {
   return [...base, ...newEntries]
 }
 
+function saveLastSyncTimestamp() {
+  try {
+    localStorage.setItem(STORAGE_KEY_LAST_SYNC, String(Date.now()))
+  } catch {}
+}
+
+export function getLastSyncTimestamp() {
+  try {
+    const ts = localStorage.getItem(STORAGE_KEY_LAST_SYNC)
+    return ts ? parseInt(ts, 10) : null
+  } catch {}
+  return null
+}
+
 export function getDatabaseInfo() {
   const version = getCachedVersion()
   const lookup = getMergedLookup()
@@ -88,6 +103,7 @@ export function clearUpdateCache() {
     localStorage.removeItem(STORAGE_KEY_VERSION)
     localStorage.removeItem(STORAGE_KEY_PATCH)
     localStorage.removeItem(STORAGE_KEY_FULL)
+    localStorage.removeItem(STORAGE_KEY_LAST_SYNC)
     mergedDataCache = null
   } catch {}
 }
@@ -104,7 +120,10 @@ export async function checkForUpdates() {
     const remoteVersion = manifest.version || 0
     const localVersion = getCachedVersion()
 
-    if (remoteVersion <= localVersion) return { updated: false, count: 0 }
+    if (remoteVersion <= localVersion) {
+      saveLastSyncTimestamp()
+      return { updated: false, count: 0 }
+    }
 
     const entries = manifest.entries || []
     const dataUrl = manifest.dataUrl
@@ -122,6 +141,7 @@ export async function checkForUpdates() {
             const extra = (entries || []).filter((e) => !seen.has(`${e.name}||${e.year}`))
             const merged = extra.length > 0 ? [...fullData, ...extra] : fullData
             saveFullLookup(remoteVersion, merged)
+            saveLastSyncTimestamp()
             mergedDataCache = null
             return { updated: true, count: extra.length, fullRefresh: true }
           }
@@ -129,9 +149,13 @@ export async function checkForUpdates() {
       } catch {}
     }
 
-    if (entries.length === 0) return { updated: false, count: 0 }
+    if (entries.length === 0) {
+      saveLastSyncTimestamp()
+      return { updated: false, count: 0 }
+    }
 
     savePatch(remoteVersion, entries)
+    saveLastSyncTimestamp()
     mergedDataCache = null
     return { updated: true, count: entries.length }
   } catch {

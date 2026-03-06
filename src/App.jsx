@@ -7,7 +7,7 @@ import EditCarModal from './components/EditCarModal'
 import CustomSelect from './components/CustomSelect'
 import { useFavorites } from './hooks/useFavorites'
 import { storage } from './storage'
-import { checkForUpdates, getDatabaseInfo, clearUpdateCache } from './updateService'
+import { checkForUpdates, getDatabaseInfo, getLastSyncTimestamp } from './updateService'
 
 const SORT_OPTIONS = [
   { value: 'name', label: 'Name A–Z' },
@@ -43,6 +43,7 @@ function App() {
   )
   const [toast, setToast] = useState(null)
   const toastTimerRef = useRef(null)
+  const updateStatusTimerRef = useRef(null)
 
   const handleThemeChange = (newTheme) => {
     setTheme(newTheme)
@@ -56,6 +57,10 @@ function App() {
   const handleCheckUpdates = async () => {
     setUpdateChecking(true)
     setUpdateStatus(null)
+    if (updateStatusTimerRef.current) {
+      clearTimeout(updateStatusTimerRef.current)
+      updateStatusTimerRef.current = null
+    }
     const result = await checkForUpdates()
     setUpdateChecking(false)
     if (result.error) {
@@ -65,10 +70,20 @@ function App() {
     } else {
       setUpdateStatus('Already up to date.')
     }
+    updateStatusTimerRef.current = setTimeout(() => {
+      setUpdateStatus(null)
+      updateStatusTimerRef.current = null
+    }, 3000)
   }
 
   const loadCars = useCallback(() => {
     return storage.loadCars().then(setCars)
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      if (updateStatusTimerRef.current) clearTimeout(updateStatusTimerRef.current)
+    }
   }, [])
 
   useEffect(() => {
@@ -213,7 +228,30 @@ function App() {
           </div>
         ) : sortedCars.length === 0 ? (
           <div className="empty-state">
-            <div className="empty-icon">📦</div>
+            <div className="empty-icon">
+              <svg width="160" height="88" viewBox="0 0 160 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="empty-car-body" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#06b6d4"/>
+                    <stop offset="100%" stopColor="#0891b2"/>
+                  </linearGradient>
+                  <linearGradient id="empty-car-roof" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#f59e0b"/>
+                    <stop offset="100%" stopColor="#d97706"/>
+                  </linearGradient>
+                </defs>
+                <ellipse cx="80" cy="82" rx="55" ry="5" fill="#1e293b" opacity="0.2"/>
+                <path d="M18 58 L26 48 L34 44 L48 40 L112 40 L126 44 L134 48 L142 58 Z" fill="url(#empty-car-body)"/>
+                <path d="M48 40 L54 32 L72 28 L88 28 L106 32 L112 40 Z" fill="url(#empty-car-roof)"/>
+                <rect x="58" y="32" width="24" height="10" rx="1" fill="#0f172a" opacity="0.8"/>
+                <rect x="88" y="32" width="24" height="10" rx="1" fill="#0f172a" opacity="0.8"/>
+                <path d="M72 36 L88 36" stroke="#fbbf24" strokeWidth="1.5" strokeLinecap="round" opacity="0.8"/>
+                <circle cx="42" cy="62" r="14" fill="#fef3c7" stroke="#f59e0b" strokeWidth="2.5"/>
+                <circle cx="42" cy="62" r="6" fill="#f59e0b"/>
+                <circle cx="118" cy="62" r="14" fill="#fef3c7" stroke="#f59e0b" strokeWidth="2.5"/>
+                <circle cx="118" cy="62" r="6" fill="#f59e0b"/>
+              </svg>
+            </div>
             <h2>No cars yet</h2>
             <p>
               {showFavoritesOnly
@@ -327,16 +365,12 @@ function App() {
                 {updateStatus && (
                   <span className="settings-update-status">{updateStatus}</span>
                 )}
-                <button
-                  type="button"
-                  className="settings-clear-cache-btn"
-                  onClick={() => {
-                    clearUpdateCache()
-                    setUpdateStatus('Cache cleared. Tap Check for Updates.')
-                  }}
-                >
-                  Clear cache
-                </button>
+                <span className="settings-last-sync">
+                  Last synced: {(() => {
+                    const ts = getLastSyncTimestamp()
+                    return ts ? new Date(ts).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) : 'Never'
+                  })()}
+                </span>
               </div>
               <div className="settings-section settings-about">
                 <span className="settings-label">App Version</span>
@@ -344,7 +378,7 @@ function App() {
               </div>
               <div className="settings-section settings-about">
                 <span className="settings-label">Database</span>
-                <span className="settings-version">v{getDatabaseInfo().version} · {getDatabaseInfo().count.toLocaleString()} cars</span>
+                <span className="settings-version">{getDatabaseInfo().count.toLocaleString()} cars</span>
               </div>
             </div>
           </div>
