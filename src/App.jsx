@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import './App.css'
 import Gallery from './components/Gallery'
 import Lightbox from './components/Lightbox'
@@ -41,6 +41,8 @@ function App() {
   const [theme, setTheme] = useState(() =>
     document.documentElement.classList.contains('light-theme') ? 'light' : 'dark'
   )
+  const [toast, setToast] = useState(null)
+  const toastTimerRef = useRef(null)
 
   const handleThemeChange = (newTheme) => {
     setTheme(newTheme)
@@ -73,7 +75,18 @@ function App() {
     loadCars()
       .then(() => setLoading(false))
       .catch(() => setLoading(false))
-    checkForUpdates()
+    checkForUpdates().then((result) => {
+      if (result.updated) {
+        const msg = result.fullRefresh
+          ? (result.count > 0 ? `${result.count} new car${result.count !== 1 ? 's' : ''} added` : 'Car database updated')
+          : `${result.count} new car${result.count !== 1 ? 's' : ''} added`
+        setToast(msg)
+        toastTimerRef.current = setTimeout(() => setToast(null), 3500)
+      }
+    })
+    return () => {
+      if (toastTimerRef.current) clearTimeout(toastTimerRef.current)
+    }
   }, [loadCars])
 
   let filteredCars = cars.filter(car => {
@@ -321,6 +334,12 @@ function App() {
               </div>
             </div>
           </div>
+        </div>
+      )}
+
+      {toast && (
+        <div className="toast" role="status" aria-live="polite">
+          {toast}
         </div>
       )}
     </div>

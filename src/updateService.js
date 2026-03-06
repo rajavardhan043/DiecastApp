@@ -13,6 +13,7 @@ const MANIFEST_URL =
 
 const STORAGE_KEY_VERSION = 'diecast_patch_version'
 const STORAGE_KEY_PATCH = 'diecast_patch_entries'
+const STORAGE_KEY_FULL = 'diecast_full_lookup'
 
 let mergedDataCache = null
 
@@ -28,6 +29,14 @@ function getCachedPatch() {
   return null
 }
 
+function getCachedFullLookup() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY_FULL)
+    if (raw) return JSON.parse(raw)
+  } catch {}
+  return null
+}
+
 function getCachedVersion() {
   return parseInt(localStorage.getItem(STORAGE_KEY_VERSION) || '0', 10)
 }
@@ -36,6 +45,15 @@ function savePatch(version, entries) {
   try {
     localStorage.setItem(STORAGE_KEY_VERSION, String(version))
     localStorage.setItem(STORAGE_KEY_PATCH, JSON.stringify(entries))
+    localStorage.removeItem(STORAGE_KEY_FULL)
+  } catch {}
+}
+
+function saveFullLookup(version, data) {
+  try {
+    localStorage.setItem(STORAGE_KEY_VERSION, String(version))
+    localStorage.setItem(STORAGE_KEY_FULL, JSON.stringify(data))
+    localStorage.removeItem(STORAGE_KEY_PATCH)
   } catch {}
 }
 
@@ -48,6 +66,11 @@ function mergeData(base, patchEntries) {
 
 export function getMergedLookup() {
   if (mergedDataCache) return mergedDataCache
+  const full = getCachedFullLookup()
+  if (full && full.length > 0) {
+    mergedDataCache = full
+    return mergedDataCache
+  }
   const base = getBundledData()
   const patch = getCachedPatch()
   mergedDataCache = mergeData(base, patch)
@@ -69,6 +92,28 @@ export async function checkForUpdates() {
     if (remoteVersion <= localVersion) return { updated: false, count: 0 }
 
     const entries = manifest.entries || []
+    const dataUrl = manifest.dataUrl
+
+    if (dataUrl) {
+      try {
+        const dataResp = await fetch(dataUrl, {
+          cache: 'no-store',
+          signal: AbortSignal.timeout(15000),
+        })
+        if (dataResp.ok) {
+          const fullData = await dataResp.json()
+          if (Array.isArray(fullData) && fullData.length > 0) {
+            const seen = new Set(fullData.map((e) => `${e.name}||${e.year}`))
+            const extra = (entries || []).filter((e) => !seen.has(`${e.name}||${e.year}`))
+            const merged = extra.length > 0 ? [...fullData, ...extra] : fullData
+            saveFullLookup(remoteVersion, merged)
+            mergedDataCache = null
+            return { updated: true, count: extra.length, fullRefresh: true }
+          }
+        }
+      } catch {}
+    }
+
     if (entries.length === 0) return { updated: false, count: 0 }
 
     savePatch(remoteVersion, entries)
