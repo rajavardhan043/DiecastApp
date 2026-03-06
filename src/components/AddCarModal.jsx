@@ -32,6 +32,7 @@ function AutocompleteThumb({ src }) {
       alt=""
       className="autocomplete-thumb"
       onError={() => setFailed(true)}
+      referrerPolicy="no-referrer"
     />
   )
 }

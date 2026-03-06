@@ -68,14 +68,7 @@ export async function checkForUpdates() {
 
     if (remoteVersion <= localVersion) return { updated: false, count: 0 }
 
-    if (!manifest.patchUrl) return { updated: false, count: 0 }
-    const patchResp = await fetch(manifest.patchUrl, {
-      signal: AbortSignal.timeout(15000),
-    })
-    if (!patchResp.ok) return { updated: false, count: 0 }
-
-    const patchData = await patchResp.json()
-    const entries = patchData.entries || []
+    const entries = manifest.entries || []
     if (entries.length === 0) return { updated: false, count: 0 }
 
     savePatch(remoteVersion, entries)
