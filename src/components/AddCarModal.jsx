@@ -6,6 +6,16 @@ import { getMergedLookup } from '../updateService'
 
 const MAX_IMAGES = 10
 
+const THUMBS_BASE = 'https://rajavardhan043.github.io/DiecastApp'
+function resolveThumbSrc(img) {
+  if (!img) return null
+  if (img.startsWith('http')) return img
+  if (img.startsWith('/') && typeof window !== 'undefined' && !window.location.origin.startsWith('http')) {
+    return THUMBS_BASE + img
+  }
+  return img
+}
+
 const BRANDS = [
   { value: 'hot-wheels', label: 'Hot Wheels' },
   { value: 'mini-gt', label: 'Mini GT' },
@@ -59,7 +69,13 @@ function AddCarModal({ onClose, onSuccess, existingCars = [] }) {
   const allEntries = useCallback(() => {
     const fromCollection = existingCars
       .filter(c => c.name)
-      .map(c => ({ name: c.name, year: c.year || '', series: c.series || '', source: 'collection' }))
+      .map(c => ({
+        name: c.name,
+        year: c.year || '',
+        series: c.series || '',
+        img: c.displayUrl || (c.displayUrls && c.displayUrls[0]) || null,
+        source: 'collection',
+      }))
     const seen = new Set(fromCollection.map(e => `${e.name}||${e.year}`))
     const lookup = getMergedLookup()
     const fromLookup = lookup.filter(e => !seen.has(`${e.name}||${e.year}`))
@@ -69,6 +85,7 @@ function AddCarModal({ onClose, onSuccess, existingCars = [] }) {
   const handleNameChange = (value) => {
     setName(value)
     setSelectedIdx(-1)
+    setError('')
     if (brand !== 'hot-wheels' || value.trim().length < 2) {
       setSuggestions([])
       setShowSuggestions(false)
@@ -214,8 +231,20 @@ function AddCarModal({ onClose, onSuccess, existingCars = [] }) {
       return
     }
     setError('')
-    setUploading(true)
 
+    const useName = (name || '').trim()
+    const useYear = (year || '').trim()
+    const alreadyExists = useName && existingCars.some(
+      c => (c.name || '').trim().toLowerCase() === useName.toLowerCase() &&
+           (c.year || '').trim() === useYear &&
+           (c.cardType || 'indian') === cardType
+    )
+    if (alreadyExists) {
+      setError('This car is already in your garage')
+      return
+    }
+
+    setUploading(true)
     const useBrand = brand === 'other' && customBrand
       ? customBrand.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'other'
       : brand
@@ -301,7 +330,7 @@ function AddCarModal({ onClose, onSuccess, existingCars = [] }) {
                     className={`autocomplete-item ${i === selectedIdx ? 'active' : ''}`}
                     onMouseDown={() => selectSuggestion(entry)}
                   >
-                    <AutocompleteThumb src={entry.img} />
+                    <AutocompleteThumb src={resolveThumbSrc(entry.img)} />
                     <div className="autocomplete-text">
                       <span className="autocomplete-name">{entry.name}</span>
                       {(entry.year || entry.series) && (
@@ -320,7 +349,10 @@ function AddCarModal({ onClose, onSuccess, existingCars = [] }) {
             <label>Card Type</label>
             <CustomSelect
               value={cardType}
-              onChange={setCardType}
+              onChange={(v) => {
+                setCardType(v)
+                setError('')
+              }}
               options={[
                 { value: 'indian', label: 'Indian' },
                 { value: 'imported', label: 'Imported' },
