@@ -1341,6 +1341,12 @@
     "img": "/thumbs/236.webp"
   },
   {
+    "name": "'21 Ford Bronco",
+    "year": "2026",
+    "series": "",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "'22 Ford Maverick Custom",
     "year": "2024",
     "series": "HW Hot Trucks",
@@ -5126,6 +5132,12 @@
     "year": "2026",
     "series": "HW Dirt",
     "img": "/thumbs/899.webp"
+  },
+  {
+    "name": "'70 Ford Mustang Mach 1",
+    "year": "2011",
+    "series": "",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/70_ford_mustang_mach_1_2011_yellow.png"
   },
   {
     "name": "'70 Ford Mustang Mach 1",
@@ -13990,6 +14002,12 @@
     "img": "/thumbs/2444.webp"
   },
   {
+    "name": "Click Shift",
+    "year": "2026",
+    "series": "",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "Clip Rod",
     "year": "2020",
     "series": "Experimotors",
@@ -19197,6 +19215,12 @@
     "img": "/thumbs/3365.webp"
   },
   {
+    "name": "Fiat 500C",
+    "year": "2026",
+    "series": "",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "Fiat 500e",
     "year": "2023",
     "series": "HW Green Speed",
@@ -20256,6 +20280,11 @@
   },
   {
     "name": "Ford Stake Bed Truck",
+    "year": "1993",
+    "series": ""
+  },
+  {
+    "name": "Ford Stake Bed Truck",
     "year": "1999",
     "series": "",
     "img": "/thumbs/3553.webp"
@@ -20833,6 +20862,12 @@
     "year": "1990",
     "series": "",
     "img": "/thumbs/3654.webp"
+  },
+  {
+    "name": "Good Humor Truck",
+    "year": "1993",
+    "series": "",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Good_Humor_Truck_LimeGrn.JPG"
   },
   {
     "name": "Good Humor Truck",
@@ -24830,6 +24865,12 @@
     "img": "/thumbs/4356.webp"
   },
   {
+    "name": "Lil' Roar",
+    "year": "2026",
+    "series": "",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "Limited Grip",
     "year": "2023",
     "series": "HW Hot Trucks",
@@ -26385,6 +26426,12 @@
     "year": "1992",
     "series": "",
     "img": "/thumbs/4625.webp"
+  },
+  {
+    "name": "Mercedes-Benz Unimog",
+    "year": "1993",
+    "series": "",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Mercedes_Benz_Unimog_TanCTW.JPG"
   },
   {
     "name": "Mercedes-Benz Unimog",
@@ -37888,6 +37935,12 @@
     "name": "Tractor",
     "year": "1992",
     "series": ""
+  },
+  {
+    "name": "Tractor",
+    "year": "1993",
+    "series": "",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Tractor_Red.JPG"
   },
   {
     "name": "Tractor",
