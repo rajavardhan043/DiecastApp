@@ -19854,6 +19854,12 @@
     "img": "/thumbs/3478.webp"
   },
   {
+    "name": "Ford F-150 Lightning SuperTruck",
+    "year": "2026",
+    "series": "Truckin' Along",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/FordSupertruck.jpg"
+  },
+  {
     "name": "Ford F-Series CNG Pickup",
     "year": "1998",
     "series": "Firebird Funny Car",
@@ -20194,10 +20200,22 @@
     "img": "/thumbs/3537.webp"
   },
   {
+    "name": "Ford Performance SuperVan 4",
+    "year": "2024",
+    "series": "HW Green Speed",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/FordSuperVan4.jpg"
+  },
+  {
     "name": "Ford Performance Supervan 4",
     "year": "2025",
     "series": "HW First Response",
     "img": "/thumbs/3538.webp"
+  },
+  {
+    "name": "Ford Performance SuperVan 4",
+    "year": "2025",
+    "series": "HW First Response",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/FirstResponseSupervan.jpg"
   },
   {
     "name": "Ford RS200",
