@@ -416,6 +416,12 @@
     "img": "/thumbs/74.webp"
   },
   {
+    "name": "'11 Corvette Grand Sport",
+    "year": "2026",
+    "series": "Then and Now",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "'11 Dodge Charger R/T",
     "year": "2011",
     "series": "2011 New Models",
@@ -2029,6 +2035,12 @@
     "img": "/thumbs/357.webp"
   },
   {
+    "name": "'55 Chevy",
+    "year": "2026",
+    "series": "Cool Classics",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "'55 Chevy Bel Air",
     "year": "2010",
     "series": "",
@@ -2686,6 +2698,12 @@
     "year": "2018",
     "series": "",
     "img": "/thumbs/473.webp"
+  },
+  {
+    "name": "'63 Chevy II",
+    "year": "2026",
+    "series": "Compact Kings",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "'63 Chevy Impala",
@@ -4076,6 +4094,12 @@
     "series": "HW Flames"
   },
   {
+    "name": "'68 Shelby GT500",
+    "year": "2026",
+    "series": "HW Torque",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "'69 Camaro",
     "year": "2006",
     "series": "",
@@ -4783,6 +4807,12 @@
     "series": ""
   },
   {
+    "name": "'70 Buick GSX",
+    "year": "2026",
+    "series": "HW Torque",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "'70 Camaro",
     "year": "2013",
     "series": "",
@@ -5005,6 +5035,12 @@
     "year": "2024",
     "series": "Tooned",
     "img": "/thumbs/876.webp"
+  },
+  {
+    "name": "'70 Dodge Charger",
+    "year": "2026",
+    "series": "Tooned",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "'70 Dodge Charger R/T",
@@ -6152,6 +6188,12 @@
     "img": "/thumbs/1073.webp"
   },
   {
+    "name": "'82 Toyota Supra",
+    "year": "2026",
+    "series": "Then and Now",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "'83 Chevy Silverado",
     "year": "2011",
     "series": "",
@@ -6763,6 +6805,12 @@
     "year": "2025",
     "series": "HW: '70s vs. '90s",
     "img": "/thumbs/1180.webp"
+  },
+  {
+    "name": "'94 Audi Avant RS2",
+    "year": "2026",
+    "series": "Wagons",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "'94 Bugatti EB110 SS",
@@ -9313,6 +9361,12 @@
     "year": "2025",
     "series": "Safari Mode",
     "img": "/thumbs/1620.webp"
+  },
+  {
+    "name": "Amaru GTC",
+    "year": "2026",
+    "series": "HW Mods",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Amazoom",
@@ -17547,6 +17601,12 @@
     "img": "/thumbs/3064.webp"
   },
   {
+    "name": "Duck N' Roll",
+    "year": "2026",
+    "series": "HW Dirt",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "Duel Fueler",
     "year": "2008",
     "series": ""
@@ -23624,6 +23684,12 @@
     "img": "/thumbs/4132.webp"
   },
   {
+    "name": "Jaguar XJC V12 Coupe",
+    "year": "2026",
+    "series": "HW Euro",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "Jaguar XJR9",
     "year": "1997",
     "series": ""
@@ -25329,6 +25395,12 @@
     "year": "2026",
     "series": "Exoticars",
     "img": "/thumbs/4429.webp"
+  },
+  {
+    "name": "Mad Drip",
+    "year": "2026",
+    "series": "Sweet Rides",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Mad Manga",
@@ -27326,6 +27398,12 @@
     "name": "Mountain Mauler",
     "year": "2020",
     "series": "Olympic Games Tokyo 2020"
+  },
+  {
+    "name": "Mountain Mauler",
+    "year": "2026",
+    "series": "Hot Wheels Let's Race",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Movin' On",
