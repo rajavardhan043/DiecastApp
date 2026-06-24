@@ -3459,6 +3459,12 @@
     "img": "/thumbs/567.webp"
   },
   {
+    "name": "'66 Buick Riviera",
+    "year": "2026",
+    "series": "Cool Classics",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "'66 Chevy Nova",
     "year": "2007",
     "series": ""
@@ -8160,6 +8166,12 @@
     "year": "2000",
     "series": "",
     "img": "/thumbs/1340.webp"
+  },
+  {
+    "name": "1970 Custom Plymouth Roadrunner",
+    "year": "2026",
+    "series": "Screen Time",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "1970 Dodge Charger",
@@ -36507,6 +36519,12 @@
     "year": "2025",
     "series": "HW Dream Garage",
     "img": "/thumbs/5983.webp"
+  },
+  {
+    "name": "Slide-Burn",
+    "year": "2026",
+    "series": "HW Torque",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Slideout",
