@@ -652,6 +652,12 @@
     "img": "/thumbs/114.webp"
   },
   {
+    "name": "'15 Dodge Challenger SRT",
+    "year": "2027",
+    "series": "Speed Blur",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "'15 Dodge Charger SRT",
     "year": "2016",
     "series": "",
@@ -1381,6 +1387,12 @@
     "year": "2025",
     "series": "HW Modified",
     "img": "/thumbs/238.webp"
+  },
+  {
+    "name": "'22 Ford Maverick Custom",
+    "year": "2027",
+    "series": "Nightspeed",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "'23 Ram 1500",
@@ -6625,6 +6637,12 @@
     "img": "/thumbs/1088.webp"
   },
   {
+    "name": "'84 Audi Sport quattro",
+    "year": "2027",
+    "series": "HW Dirt",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "'84 Corvette",
     "year": "2023",
     "series": "HW: The '80s",
@@ -11709,6 +11727,12 @@
     "img": "/thumbs/1907.webp"
   },
   {
+    "name": "Batmobile",
+    "year": "2027",
+    "series": "Batman",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "Batplane",
     "year": "2020",
     "series": "Batman",
@@ -13880,6 +13904,12 @@
     "img": "/thumbs/2270.webp"
   },
   {
+    "name": "Carbonator",
+    "year": "2027",
+    "series": "Mid-Engines",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "Carbonic",
     "year": "2014",
     "series": "",
@@ -14038,6 +14068,12 @@
     "year": "2024",
     "series": "Quarter Mile Heroes",
     "img": "/thumbs/2298.webp"
+  },
+  {
+    "name": "Celero GT",
+    "year": "2027",
+    "series": "HW Hall of Famers",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Chaparral 2",
@@ -18893,6 +18929,12 @@
     "img": "/thumbs/3102.webp"
   },
   {
+    "name": "El Segundo Coupe",
+    "year": "2027",
+    "series": "HW Hall of Famers",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "El Segundo Coupé Clip",
     "year": "2026",
     "series": "Experimotors",
@@ -19892,6 +19934,12 @@
     "year": "2010",
     "series": "",
     "img": "/thumbs/3264.webp"
+  },
+  {
+    "name": "Ferrari 308 GTS",
+    "year": "2027",
+    "series": "Ferrari",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Ferrari 312P",
@@ -21412,6 +21460,12 @@
     "img": "/thumbs/3508.webp"
   },
   {
+    "name": "Ford GT40",
+    "year": "2027",
+    "series": "Mid-Engines",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "Ford GT90 Concept",
     "year": "2006",
     "series": "",
@@ -21918,6 +21972,12 @@
     "year": "2021",
     "series": "X-Raycers",
     "img": "/thumbs/3588.webp"
+  },
+  {
+    "name": "Forward Force",
+    "year": "2027",
+    "series": "X-Raycers",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Four-1",
@@ -23200,6 +23260,12 @@
     "year": "2025",
     "series": "Rod Squad",
     "img": "/thumbs/3795.webp"
+  },
+  {
+    "name": "Hi-Roller",
+    "year": "2027",
+    "series": "X-Raycers",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Hi-Roller II",
@@ -25790,6 +25856,12 @@
     "img": "/thumbs/4215.webp"
   },
   {
+    "name": "Kowloon'd Hypervan",
+    "year": "2027",
+    "series": "HW Heavyweights",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "Krazy 8s",
     "year": "2001",
     "series": "",
@@ -26684,6 +26756,12 @@
     "year": "2025",
     "series": "Peak Pursuit",
     "img": "/thumbs/4359.webp"
+  },
+  {
+    "name": "Limited Grip",
+    "year": "2027",
+    "series": "HW Sketch Mode",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Limozeen",
@@ -27828,6 +27906,12 @@
     "img": "/thumbs/4546.webp"
   },
   {
+    "name": "Mazda RX-7",
+    "year": "2027",
+    "series": "Nightspeed",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "McLaren 720S",
     "year": "2018",
     "series": "New for 2018!",
@@ -27868,6 +27952,12 @@
     "year": "2024",
     "series": "HW: The '90s",
     "img": "/thumbs/4553.webp"
+  },
+  {
+    "name": "McLaren F1",
+    "year": "2027",
+    "series": "HW Fan Driven",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "McLaren F1 GTR",
@@ -29785,6 +29875,12 @@
     "img": "/thumbs/4856.webp"
   },
   {
+    "name": "Night Shifter",
+    "year": "2027",
+    "series": "Nightspeed",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
+  },
+  {
     "name": "Nightstreaker",
     "year": "1985",
     "series": ""
@@ -30997,6 +31093,12 @@
     "year": "2026",
     "series": "Exoticars",
     "img": "/thumbs/5055.webp"
+  },
+  {
+    "name": "Pagani Zonda Cinque",
+    "year": "2027",
+    "series": "HW Euro",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Pagani Zonda R",
@@ -32248,6 +32350,12 @@
     "year": "2025",
     "series": "Then and Now",
     "img": "/thumbs/5250.webp"
+  },
+  {
+    "name": "Porsche 911 GT3 RS",
+    "year": "2027",
+    "series": "HW Fan Driven",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Porsche 911 Rallye",
@@ -33558,6 +33666,12 @@
     "year": "2026",
     "series": "HW Heavyweights",
     "img": "/thumbs/5463.webp"
+  },
+  {
+    "name": "Raijin Express",
+    "year": "2027",
+    "series": "HW Sketch Mode",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Rail Rodder",
@@ -35447,6 +35561,12 @@
     "year": "2019",
     "series": "Baja Blazers",
     "img": "/thumbs/5779.webp"
+  },
+  {
+    "name": "Sandivore",
+    "year": "2027",
+    "series": "Hot Wheels Let's Race",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Sandstinger",
@@ -41790,6 +41910,12 @@
     "year": "2011",
     "series": "",
     "img": "/thumbs/6810.webp"
+  },
+  {
+    "name": "Ultra Turbofire",
+    "year": "2027",
+    "series": "Hot Wheels Let's Race",
+    "img": "https://hotwheels.fandom.com/wiki/Special:FilePath/Image_Not_Available.jpg"
   },
   {
     "name": "Uncertain T",
